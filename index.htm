@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Waive Test</title>
+    <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+   <div id="wrapper">
+<!--header begins-->
+     <header>
+        <img src="logo.png" alt="logo" height="100" width="100">
+         <div id="search-box-wrapper">
+        <input type="text" class="search-box-input">
+        <button class="search-box-button">&#128269;</button>
+              </div>
+       <h1>Thanksgiving</h1>
+       </header>
+    <nav>
+       <ul class="main_menu">
+           <li><a href="index.htm">Home</a></li>
+           <li><a href="contact.htm">Contact</a></li>
+           <li><a href="#">About</a></li>
+           <li><a href="#">History</a></li>
+        </ul>
+       </nav>
+    </div> 
+<!--header ends-->
+    
+<!--slideshow begins-->
+
+    
+ <div class="slideshow-container">
+
+<div class="myslides fade">
+
+<div><img src="Thanksgiving-1.jpeg" alt="Thanksgiving image 1" height="532px" width="800px"></div>
+     </div>
+
+<div class="myslides fade">
+    
+<div><img src="Thanksgiving-2.jpeg" alt="Thanksgiving image 2" height="532px" width="800px"></div>
+     </div>
+
+<div class="myslides fade">
+   
+<div><img src="Thanksgiving-3.jpeg" alt="Thanksgiving image 3" height="532px" width="800px"></div>
+     </div>
+
+<div class="myslides fade">
+   
+<div><img src="Thanksgiving-4.jpg" alt="Thanksgiving image 4" height="532px" width="800px"></div>
+     </div>
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>        
+<!--Slideshow ends-->
+        
+<!--fixed img-->
+<div class="fix-img">
+    <div class="textover">
+        <p>Our best wishes for a Happy Thanksgiving.</p> 
+        <!--<img src="fix-img.jpeg">-->   
+    </div>
+        </div>
+<!--fixed img ends-->
+        
+<!--accordion-->
+<div id="accordion_main">
+    
+<div id="accordion_img">
+    <div id="accordion-1"><img src="accordion-1.jpeg" alt="The season for giving Thanks"  id="image"></div>
+    <div id="accordion-2"><img src="accordion-2.jpeg" alt="The happiness of the season"  id="image"></div>
+    <div id="accordion-3"><img src="accordion-3.jpeg" alt="The great dinner for gathering" id="image"></div>
+</div>    
+    
+<div id="acd">    
+            <button class="accordion" onclick="document.getElementById('image').src='accordion-1.jpeg'">The SEASON</button>
+<div class="panel1">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div>
+    
+ 
+<button class="accordion" onclick="document.getElementById('image').src='accordion-2.jpeg'">THE HAPPINESS</button>
+<div class="panel2">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div>
+
+   
+<button class="accordion" onclick="document.getElementById('image').src='accordion-3.jpeg'">THE DINNER</button>
+<div class="panel3">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div>
+        </div>
+</div>
+        <br>
+<!--end of accordion-->
+        
+<!--begining of images-->
+<div class="img-wrapper">
+    <div id="myImage1"><img src="the-fruit.jpeg" alt="Thanksgiving image">
+    <p>Fruit of Fall. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    </div>
+    <div id="myImage2"><img src="the-dessert.jpeg" alt="Thanksgiving image">
+    <p>Pumpkin Pie</p>
+    </div>
+    <div id="myImage3"><img src="the-soup.jpeg" alt="Thanksgiving image">
+    <p>Golden Soup</p>
+    </div>
+    <div id="myImage4"><img src="hot-chocolate.jpeg" alt="Thanksgiving image">
+    <p>Hot Chocolate</p>
+    </div>
+    <div id="myImage5"><img src="pumpkin-dish.jpeg" alt="Thanksgiving image">
+    <p>Taste of the Season. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id congue libero, sed lacinia lectus.</p>
+    </div>
+    <div id="myImage6"><img src="pumpkin-patch.jpeg" alt="Thanksgiving image">
+    <p>Family Fun</p>
+    </div>
+        </div>   
+<!--end of the images-->
+        
+<!--begining of footer-->
+<div class="footer">
+  <p>Copyright&#64;2017</p>
+</div>        
+        
+<!--end of footer-->        
+        
+
+<script type="text/javascript">
+var slideIndex = 1;
+showSlide(slideIndex);
+
+function plusSlides(n){
+showSlide(slideIndex += n);
+}
+
+function currentSlide(n) {
+showSlide(slideIndex = n);
+}
+
+function showSlide(n){
+var i;
+var slides = document.getElementsByClassName("myslides");
+
+if (n > slides.length) { slideIndex = 1};
+if (n < 1) { slideIndex = slides.length};
+for (i=0;i<slides.length;i++) {
+slides[i].style.display = "none";
+};
+
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+</script>
+
+<script type="text/javascript">
+    var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}   
+
+</script> 
+        
+   
+</body>
+</html>
